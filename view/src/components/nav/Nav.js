@@ -4,11 +4,12 @@ import util from '../util'
 export default class Nav extends Component {
     state = {
         style: {
-            width: 200,
+            width: this.props.navWidth,
             height: '100%',
             borderRight: util.makeBorder()
         },
-        headerHeight: this.props.headerHeight
+        headerHeight: this.props.headerHeight,
+        navWidth: this.props.navWidth
     };
 
     componentDidMount() {
@@ -28,5 +29,6 @@ export default class Nav extends Component {
 }
 
 Nav.defaultProps = {
-    headerHeight: 100
+    headerHeight: 100,
+    navWidth: 200,
 };
