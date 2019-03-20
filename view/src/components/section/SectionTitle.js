@@ -3,10 +3,14 @@ import Ctxt from '../util/Ctxt'
 
 export default class SectionTitle extends Component {
     state = {
-        style: {},
+        style: {
+            marginLeft: 10,
+            marginTop: 10,
+            marginBottom: 10,
+        },
         title: {
-            data:this.props.title,
-            size:20
+            data: this.props.title,
+            size: 30
         }
     };
 
@@ -19,7 +23,7 @@ export default class SectionTitle extends Component {
 
     render() {
         return (
-            <div style={this.state.style}>
+            <div className="section-title" style={this.state.style}>
                 <Ctxt data={this.state.title.data} size={this.state.title.size}/>
             </div>
         )

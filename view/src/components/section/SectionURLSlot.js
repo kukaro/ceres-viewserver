@@ -3,9 +3,18 @@ import React, {Component} from 'react';
 import Cinput from '../util/Cinput'
 
 export default class SectionURLSlot extends Component {
+    render() {
+        return (
+            <div className="section-url-slot" style={this.state.style}>
+                <Cinput />
+            </div>
+        )
+    }
     state = {
         style: {
-
+            width: '100%',
+            height: 30,
+            backgroundColor: 'inherit'
         }
     };
 
@@ -14,13 +23,6 @@ export default class SectionURLSlot extends Component {
 
     constructor(props) {
         super(props)
-    }
-
-    render() {
-        return (
-            <div style={this.state.style}>
-            </div>
-        )
     }
 }
 
